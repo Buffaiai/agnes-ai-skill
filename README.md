@@ -21,7 +21,17 @@
 
 ## 📦 安装
 
-### 方法一：全局安装（推荐）
+### 方法一：AI 自动安装（推荐 ⭐）
+
+将以下内容复制并发给 Trae 中的 AI，AI 会为你自动下载并添加 Skill：
+
+```
+请帮我下载并安装这个 skill：https://github.com/Buffaiai/agnes-ai-skill
+```
+
+AI 会自动完成下载、安装到 skills 目录，无需手动操作。
+
+### 方法二：全局安装
 
 将整个 `agnes-ai` 文件夹放到 Trae 全局 skills 目录：
 
@@ -30,7 +40,7 @@
 cp -r agnes-ai-skill ~/.trae-cn/skills/agnes-ai
 ```
 
-### 方法二：工作区安装
+### 方法三：工作区安装
 
 仅在当前项目中使用：
 
