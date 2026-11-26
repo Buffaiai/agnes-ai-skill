@@ -1,12 +1,25 @@
 ---
 name: "agnes-ai"
-version: "1.0.0"
-description: "使用 Agnes AI 的图片和视频生成模型（文生图、图生图、文生视频、图生视频）。当用户要求用 Agnes 生成图片或视频时调用。"
+version: "1.1.0"
+description: "使用 Agnes AI 生成图片与视频（Agnes image & video generation）。支持文生图 text-to-image、图生图 image-to-image（风格转换/图像编辑/多图合成）、文生视频 text-to-video、图生视频 image-to-video（让静态图片动起来）。当用户要求生成/绘制/创作图片或视频、做海报/封面/插画/配图，或提到 Agnes、生图、画图、做视频时触发加载。"
+user-invocable: true
+disable-model-invocation: false
 ---
 
 # Agnes AI 图片与视频生成 Skill
 
 通过 Agnes AI API 生成图片和视频内容，支持文生图、图生图、文生视频、图生视频等多种模式。
+
+## 何时使用本技能
+
+当用户的请求涉及以下任一意图时，加载并使用本技能：
+
+- **生成图片**：文生图（根据文字描述画图）、图生图（基于参考图改风格 / 再创作）
+- **生成视频**：文生视频（文字描述生成视频）、图生视频（让静态图片动起来）
+- **图片编辑 / 多图合成**：风格转换、图像润色、素材合成
+- **提及关键词**：Agnes、生图、画图、画一张、生成图片、做视频、生成视频、图生视频、text-to-image、image-to-video 等
+
+> 本技能可由 AI 自动加载，也可由用户通过斜杠命令 `/agnes-ai` 显式调用。所有智能体（主 Agent / 子智能体）在扫描到相关请求时均可触发。
 
 ## 支持的模型
 
