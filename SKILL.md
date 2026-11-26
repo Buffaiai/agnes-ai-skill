@@ -1,17 +1,18 @@
 ---
 name: agnes-ai
-description: "使用 Agnes AI 生成图片与视频（Agnes image & video generation）。支持文生图 text-to-image、图生图 image-to-image（风格转换/图像编辑/多图合成）、文生视频 text-to-video、图生视频 image-to-video（让静态图片动起来）。当用户要求生成/绘制/创作图片或视频、做海报/封面/插画/配图，或提到 Agnes、生图、画图、做视频时触发加载。"
+description: "使用 Agnes AI 生成图片与视频（Agnes AI image & video generation）。支持文生图 text-to-image、图生图 image-to-image（风格转换/图像编辑/多图合成/参考图再创作）、文生视频 text-to-video、图生视频 image-to-video（让静态图片动起来/关键帧动画）。当用户要求生成、绘制、创作图片或视频，做海报、封面、插画、配图、头像、壁纸，或提到 Agnes、生图、画图、做视频、生成视频、让图动起来、text-to-image、image-to-video 等意图时触发加载。"
 license: MIT
 user-invocable: true
 disable-model-invocation: false
 metadata:
-  version: "1.2.0"
+  version: "1.3.0"
   author: "Buffaiai"
+  display-name: "Agnes AI 图片与视频创作助手"
 ---
 
-# Agnes AI 图片与视频生成 Skill
+# Agnes AI 图片与视频创作助手
 
-通过 Agnes AI API 生成图片和视频内容，支持文生图、图生图、文生视频、图生视频等多种模式。
+通过 Agnes AI API 生成图片与视频内容，支持文生图、图生图、文生视频、图生视频、关键帧动画等多种模式。
 
 ## 何时使用本技能
 

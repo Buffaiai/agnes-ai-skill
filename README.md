@@ -1,15 +1,20 @@
-# Agnes AI Skill（跨 Agent 工具通用）
+# Agnes AI 图片与视频创作助手
 
-遵循 [Agent Skills](https://agentskills.io) 开放规范的图片与视频生成技能，可在 **Trae、Claude Code、Cursor、Codex、Roo Code** 等所有兼容工具中使用。支持文生图、图生图、文生视频、图生视频等多种模式。
+> 遵循 [Agent Skills](https://agentskills.io) 开放规范，跨 **Trae / Claude Code / Cursor / Codex / Roo** 通用的 AI 生图与生视频技能。文生图、图生图、文生视频、图生视频，一句话自然语言生成。
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Agent Skills](https://img.shields.io/badge/Agent%20Skills-compatible-brightgreen)](https://agentskills.io)
+![Platform](https://img.shields.io/badge/Platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)
 
 ## ✨ 功能特性
 
-- 🖼️ **文生图** — 根据文本描述生成高清图片
-- 🎨 **图生图** — 基于参考图片进行风格转换和再创作
-- 🎬 **文生视频** — 从文本直接生成视频，支持音画同步
-- 🖼️➡️🎥 **图生视频** — 让静态图片动起来
-- 🌐 **双站支持** — 自动适配中国站和国际站
-- ⚡ **即开即用** — 配置 API Key 后直接用自然语言调用
+- 🖼️ **文生图** — 文本描述生成高清图片（最高 4K）
+- 🎨 **图生图** — 参考图风格转换、图像编辑、多图合成
+- 🎬 **文生视频** — 文本生成视频，原生音画同步
+- 🖼️➡️🎥 **图生视频** — 让静态图片动起来，支持关键帧动画
+- 🌐 **双站支持** — 中国站 / 国际站自动切换
+- 🆓 **永久免费** — 免费额度，无需绑定信用卡
+- 🔌 **跨工具通用** — 一份 Skill，所有兼容 Agent 工具皆可用
 
 ## 支持的模型
 
@@ -95,7 +100,7 @@ export AGNES_API_KEY="your-api-key-here"
 
 ## 🚀 使用方式
 
-配置好 API Key 后，在 Trae 中直接用自然语言描述即可：
+配置好 API Key 后，在任意兼容的 AI 工具中直接用自然语言描述即可：
 
 ### 文生图
 
