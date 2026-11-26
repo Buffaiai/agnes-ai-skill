@@ -1,6 +1,6 @@
-# Agnes AI Skill for Trae
+# Agnes AI Skill（跨 Agent 工具通用）
 
-在 Trae 中使用 Agnes AI 的图片和视频生成模型，支持文生图、图生图、文生视频、图生视频等多种模式。
+遵循 [Agent Skills](https://agentskills.io) 开放规范的图片与视频生成技能，可在 **Trae、Claude Code、Cursor、Codex、Roo Code** 等所有兼容工具中使用。支持文生图、图生图、文生视频、图生视频等多种模式。
 
 ## ✨ 功能特性
 
@@ -21,36 +21,56 @@
 
 ## 📦 安装
 
+本 Skill 遵循 [Agent Skills](https://agentskills.io) 开放规范，可在所有兼容的 AI Agent 工具中使用。
+
 ### 方法一：AI 自动安装（推荐 ⭐）
 
-将以下内容复制并发给 Trae 中的 AI，AI 会为你自动下载并添加 Skill：
+将以下内容复制并发给你正在使用的 AI Agent（Trae / Claude Code / Cursor 等），AI 会自动下载并安装：
 
 ```
 请帮我下载并安装这个 skill：https://github.com/Buffaiai/agnes-ai-skill
 ```
 
-AI 会自动完成下载、安装到 skills 目录，无需手动操作。
+### 方法二：手动安装（全局生效）
 
-### 方法二：全局安装
+各工具扫描的 skills 目录不同，按下表放置（将文件夹重命名为 `agnes-ai`）：
 
-将整个 `agnes-ai` 文件夹放到 Trae 全局 skills 目录：
+| 工具 | 全局 skills 目录（macOS / Linux） |
+|---|---|
+| Codex / Cursor / Roo Code 等 | `~/.agents/skills/agnes-ai` |
+| Claude Code / Claude.app | `~/.claude/skills/agnes-ai` |
+| Trae（中国版） | `~/.trae-cn/skills/agnes-ai` |
+| Trae（国际版） | `~/.trae/skills/agnes-ai` |
 
-```bash
-# macOS
-cp -r agnes-ai-skill ~/.trae-cn/skills/agnes-ai
-```
-
-### 方法三：工作区安装
-
-仅在当前项目中使用：
+**一键安装（macOS / Linux）**：以 `~/.agents` 为唯一真源，软链接到各工具目录，一次配置所有工具通用：
 
 ```bash
-# 在你的项目根目录下
-mkdir -p .trae/skills
-cp -r agnes-ai-skill .trae/skills/agnes-ai
+git clone https://github.com/Buffaiai/agnes-ai-skill.git /tmp/agnes-ai-skill
+mkdir -p ~/.agents/skills
+cp -r /tmp/agnes-ai-skill ~/.agents/skills/agnes-ai
+# 软链接到其他工具（可选，共享同一份文件避免重复维护）
+mkdir -p ~/.claude/skills ~/.trae-cn/skills ~/.trae/skills
+ln -sf ../../.agents/skills/agnes-ai ~/.claude/skills/agnes-ai
+ln -sf ../../.agents/skills/agnes-ai ~/.trae-cn/skills/agnes-ai
+ln -sf ../../.agents/skills/agnes-ai ~/.trae/skills/agnes-ai
 ```
 
-安装后重启 Trae 即可生效。
+### 方法三：仅在当前项目生效（项目级）
+
+在项目根目录下创建对应工具的项目级 skills 目录：
+
+```bash
+# Codex / Cursor / Roo Code 等
+mkdir -p .agents/skills && cp -r agnes-ai-skill .agents/skills/agnes-ai
+
+# Claude Code
+mkdir -p .claude/skills && cp -r agnes-ai-skill .claude/skills/agnes-ai
+
+# Trae
+mkdir -p .trae/skills && cp -r agnes-ai-skill .trae/skills/agnes-ai
+```
+
+安装后重启对应工具即可生效。
 
 ## 🔑 配置 API Key
 
@@ -128,6 +148,7 @@ agnes-ai-skill/
 - [Agnes AI 官网](https://agnes-ai.com)
 - [Agnes AI 中国站](https://agnes-ai.cn)
 - [Agnes AI 官方文档](https://wiki.agnes-ai.com/zh-Hans/docs/overview)
+- [Agent Skills 开放规范](https://agentskills.io) — 本技能遵循的跨工具标准
 - [Trae 官网](https://trae.ai)
 
 ## 📄 许可证
